@@ -47,7 +47,7 @@ xlabel('Time index n');  ylabel('Amplitude');
 legend('Original signal','Sum (s + d)', 'Filtered signal');  
 
 M = 5; b = ones(M, 1) / M; y = filter(b, 1, x);
-subplot(2, 2, 3);
+subplot(2, 2, 2);
 plot(m, s, 'LineWidth', 2, 'Color', '#0072BD'); hold on 
 plot(m, x, 'LineWidth', 2, 'Color', 'red');     hold on
 plot(m, y, 'LineWidth', 2, 'Color', '#77AC30'); hold off
@@ -56,7 +56,7 @@ xlabel('Time index n');  ylabel('Amplitude');
 legend('Original signal','Sum (s + d)', 'Filtered signal');  
 
 M = 10; b = ones(M, 1) / M; y = filter(b, 1, x);
-subplot(2, 2, [2 4]);
+subplot(2, 2, 3);
 plot(m, s, 'LineWidth', 2, 'Color', '#0072BD'); hold on 
 plot(m, x, 'LineWidth', 2, 'Color', 'red');     hold on
 plot(m, y, 'LineWidth', 2, 'Color', '#77AC30'); hold off
@@ -80,7 +80,7 @@ xlabel('Time index n');  ylabel('Amplitude');
 legend('Sum (s + d)', 'Original signal', 'Filtered signal'); 
 
 M = 50; b = ones(M, 1) / M; y = filter(b, 1, x);
-subplot(2, 2, 3);
+subplot(2, 2, 2);
 plot(m, x, 'LineWidth', 2, 'Color', '#EDB120'); hold on
 plot(m, s, 'LineWidth', 2, 'Color', 'red');     hold on 
 plot(m, y, 'LineWidth', 2, 'Color', '#77AC30'); hold off
@@ -89,7 +89,7 @@ xlabel('Time index n');  ylabel('Amplitude');
 legend('Sum (s + d)', 'Original signal', 'Filtered signal'); 
 
 M = 100; b = ones(M, 1) / M; y = filter(b, 1, x);
-subplot(2, 2, [2 4]);
+subplot(2, 2, 3);
 plot(m, x, 'LineWidth', 2, 'Color', '#EDB120'); hold on
 plot(m, s, 'LineWidth', 2, 'Color', 'red');     hold on 
 plot(m, y, 'LineWidth', 2, 'Color', '#77AC30'); hold off

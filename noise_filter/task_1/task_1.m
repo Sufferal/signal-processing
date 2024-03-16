@@ -2,7 +2,7 @@
 rng(1)
 
 % 1. Study of random processes
-Ts = 0.01; t = 0:Ts:1; x1 = rand(1, length(t));
+Ts = 0.01; t = 0:Ts:5; x1 = rand(1, length(t));
 
 % 1.1. White noise (step = 0.01)
 f1 = figure(1);
@@ -12,13 +12,14 @@ grid on; title('White noise, step = 0.01');
 xlabel('Time, (s)'); ylabel('Function y(t)');
 
 % 1.2. White noise histogram 
+t = 0:Ts:1; x1 = rand(1, length(t));
 subplot(2, 2, 2);
 histogram(x1, t);
 grid on; title('White noise histogram, step = 0.01');
 xlabel('Value of y(t)'); ylabel('Frequency');
 
 % 1.3 White noise (step = 0.001)
-Ts = 0.001; t = 0:Ts:1; x2 = rand(1, length(t));
+Ts = 0.001; t = 0:Ts:5; x2 = rand(1, length(t));
 subplot(2, 2, 3);
 plot(t, x2, 'LineWidth', 2, 'Color', '#e37f14');
 grid on; title('White noise, step = 0.001');
@@ -26,7 +27,8 @@ xlabel('Time, (s)'); ylabel('Function y(t)');
 
 % 1.4. White noise histogram
 subplot(2, 2, 4);
-histogram(x2, t, 'FaceColor', "#0072BD");
+t = 0:Ts:1; x2 = rand(1, length(t)); 
+histogram(x2, t, "BinEdges", 0:0.01:1);
 grid on; title('White noise histogram, step = 0.001');
 xlabel('Value of y(t)'); ylabel('Frequency');
 saveas(f1, "1_1-1_4-noise-histogram.png");
